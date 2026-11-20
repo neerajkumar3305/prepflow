@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4f46e5">
+<meta name="description" content="PrepFlow: daily checklist, syllabus, goals, fitness and budget tracker.">
+<title>PrepFlow</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">P</span><div><b>PrepFlow</b><small>Neeraj · 26 Nov to 15 Feb</small></div></div>
+    <nav id="nav" class="nav" aria-label="Main"></nav>
+    <div class="sbFoot"><span>Pending tasks</span><b id="sbPending">0</b></div>
+  </aside>
+  <div class="content">
+    <header class="topbar">
+      <div class="titleRow"><button class="btn ghost backBtn" id="backBtn" hidden onclick="goBack()">‹ Back</button><div><h1 id="pageTitle">Home</h1><p id="pageSub"></p></div></div>
+      <div class="pills"><span class="pill" id="pendingPill">0 pending</span><span class="pill soft" id="streakPill">0-day streak</span></div>
+    </header>
+    <nav class="subnav" id="subnav" aria-label="Plan" hidden></nav>
+    <main id="view" class="view"></main>
+  </div>
+</div>
+<nav class="bottombar" id="bottomNav" aria-label="Mobile"></nav>
+<div id="toast" class="toast" hidden></div>
+<div id="modal" class="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="sheetHead"><h3 id="modalTitle"></h3><button class="icon" data-act="closeModal" aria-label="Close">&times;</button></div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<script src="data.js"></script>
+<script src="resources.js"></script>
+<script src="plan.js"></script>
+<script src="workout.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
